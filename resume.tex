@@ -41,10 +41,11 @@
   \vspace{8pt}\color{lighter}\interextrabold\raggedright\Large
 }{}{0em}{}[\color{faint}\titlerule]
 
-\newcommand{\resumeHeading}[4]{
+\newcommand{\resumeHeading}[3]{
+  % \item
   \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & {#2} \\
-    {\small#3} & \textit{\small #4} \\
+    \textbf{#1} & \\
+    \color{lighter}\interlight\textit{\small#2} & \color{lighter}\interlight\textit{\small#3} \\
   \end{tabular*}
 }
 
@@ -65,7 +66,7 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-  % \item
+  
   \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
     \intersemibold{#1} & {\small#2} \\
     \color{lighter}\interlight\textit{\small#3} & \color{lighter}\interlight\textit{\small#4} \\
@@ -73,7 +74,7 @@
 }
 
 \newcommand{\resumeSubSubheading}[3]{
-  \vspace{8pt}
+  \vspace{16pt}
   \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
     \intersemibold{#1} & \\
     \color{lighter}\interlight{\small#3} & \color{lighter}\interlight\textit{\small #2}\\
@@ -103,11 +104,11 @@
 
 \vspace{8pt}
 
-{\color{lighter}\intersemibold Languages}{: \color{light}Python, TypeScript, HTML/CSS, SQL, NoSQL, Java, Rust } \\
-\vspace{2pt}
-{\color{lighter}\intersemibold Proficiency}{: \color{light}git, React, NextJS, TailwindCSS, PostgreSQL, Docker, Spark, Jupyter} \\
-\vspace{2pt}
-{\color{lighter}\intersemibold Familiarity}{: \color{light}AWS, Spring, Django, Flask, Celery, Kubernetes, OpenShift, Redis, Jenkins, GitHub Actions}
+Creative software engineer with product and design sense that has spent 10 years turning complex, high-stakes cybersecurity and defense challenges into intuitive, impactful products.
+
+\vspace{8pt}
+
+{\color{lighter}\intersemibold Tech}{: \color{light}Python, Flask, Django, React, TypeScript, NextJS, TailwindCSS, HTML/CSS, Postgres, NoSQL, Java, Spring, Docker, Kubernetes, OpenShift, Spark, AWS, git } \\
 \color{black}
 
 %-----------EDUCATION-----------------
@@ -121,55 +122,46 @@
 %-----------EXPERIENCE-----------------
 \section{Experience}
 
-\resumeSubheading
-{Pearce Labs, LLC.}{(Remote) Falls Church, VA}
+\resumeHeading{Agile Defense}{Staff Software Engineer, Solutions Architect}{June 2015 -- Present}
+\vspace{8pt}
+\resumeSubSubheading{Solutions Architect}{March 2022 -- Present}{CISA, Integrated Operations Division}
+\resumeItemListStart
+\item Launched an agency-wide Common Operating Picture: a real-time geospatial platform aggregating tens of thousands of critical-infrastructure incidents; provided net-new capability for agency-wide situational awareness; briefed to members of Congress.
+\item Built a zero-net-new-cost deployment-tracking system on M365/Power Platform covering thousands of personnel; became a standing brief to the Deputy Director; improved resourcing decisions and reduced coordination time.
+\item Automated high-volume, high-criticality reports and workflows, improving consistency and quality while reducing delivery time by at least 50\%+ and returning $\sim$25-50 analyst hours/week to higher-value work.
+\resumeItemListEnd
+
+\resumeSubSubheading{Senior Software Engineer, Project Lead}{June 2018 -- March 2022}{Department of the Navy \& CISA}
+\resumeItemListStart
+\item Led 5 engineers to deliver a Python/React/Grafana/Timescale platform for Navy test analysis; replaced printed logs with a searchable, time-synced view of multivariate telemetry, geospatial data, video, and audio --- cutting analysis cycles from days to hours.
+\item Directed a 10-engineer SRE/ops team for a 60-node OpenShift/Spark/Elasticsearch/Hadoop stack processing 300 GB--1 TB/day; improved reliability of legacy hardware system to 95\% uptime, reduced MTTR by 50\% via infrastructure automation, and significantly improved POAM and compliance posture.
+\resumeItemListEnd
+
+\resumeSubSubheading{Software Engineer, Technical Lead}{June 2015 -- June 2018}{CISA, Automated Indicator Sharing Platform}
+\resumeItemListStart
+\item Led product development for a 10-engineer team across 12+ production apps; delivered a variety of net-new capabilities to improve the cybersecurity and resilience of the United States.
+\item Built core services (Java/Spring Cloud, Python/Flask, React) for a distributed platform sharing millions of cyber-threat indicators across hundreds of government and private partners; net-new capability serving as DHS's flagship cybersecurity sharing platform.
+\item Drove migration to microservices on Spring Cloud + AWS + Kubernetes; designed NiFi-based ETL with fine-grained access controls and policy-driven dissemination; resulted in increased customer adoption due to improved performance and reliability of MSA.
+\item Implemented CI/CD with Jenkins (build/test/security scans/phase-gated deploys), cutting time-to-production from 90 days to 10, significantly reducing production outages and standardizing releases across environments.
+\resumeItemListEnd
+
+\vspace{16pt}
+\resumeHeading
+{Pearce Labs, LLC.}
 {Owner, Operator}{July 2025 -- Present}
 \resumeItemListStart
 \item Own and operate a digital services agency (\href{https://pearcelabs.com}{pearcelabs.com}), providing design, development, and business automation services for local small businesses
 \resumeItemListEnd
 
-\vspace{16pt}
-\resumeSubheading
-{XOR Security}{(Remote) Falls Church, VA}
-{Staff Software Engineer}{June 2015 -- Present}
-
-\vspace{8pt}
-\resumeSubSubheading{Senior Data Scientist \& Solutions Architect}{March 2022 -- Present}{CISA, Integrated Operations Division}
-\resumeItemListStart
-\item Architected and implemented an agency-wide Common Operating Picture (COP)—a centralized geospatial dashboard and supporting services—for data collection, storage, analytics, and reporting of tens of thousands of critical infrastructure incidents, resulting in improved mission effectiveness for the agency and its leaders.
-\item Leveraged existing tools (M365 \& Power Platform) to build a deployment tracking solution with no net-new material cost to track thousands of CISA personnel, briefed directly to the Deputy Director and other Division directors, which enhanced situational awareness, decision making, and resource allocation during critical incidents.
-\item Automated several reports and business processes, resulting in improved report quality, and consistency, and reduced delivery time by over 50\%, freeing up Watch analysts to focus on higher-value tasks.
-\resumeItemListEnd
-
-\resumeSubSubheading{Senior Software Engineer \& Project Lead}{June 2018 -- March 2022}{Department of the Navy \& CISA}
-\resumeItemListStart
-\item Led a team of five engineers in the development of a prototype system using Python, React, Grafana, and TimescaleDB for analyzing and visualizing Navy test events, including multivariate timeseries and geospatial data, telemetry, tactical display video, and audio, evolving the Navy's post-test analysis capabilities from printed logs to a dynamic, searchable, and interactive system.
-\item Led a team of ten engineers to maintain site reliability and operations of a 60-node production deployment of OpenShift, Apache Spark, Elasticsearch, and Hadoop Data Platform, which supported the analytics of 300GB--1TB of network sensor data per day, revealing new insight into cyber threats impacting government networks.
-\resumeItemListEnd
-
-\resumeSubSubheading{Software Engineer \& Technical Lead}{June 2015 -- June 2018}{CISA, Automated Indicator Sharing Platform}
-\resumeItemListStart
-\item Developed Java (Spring Cloud), Python (Flask), and React applications as core components of CISA's flagship distributed messaging application built to share millions of cyber-threat indicators, resulting in enhanced cyberthreat awareness and security for hundreds of partners within the Federal Government and private sector.
-\item Researched and integrated cutting-edge technologies to improve availability and scalability, evolving to a microservices architecture heavily utilizing Spring Cloud, AWS, and Kubernetes, and implementing a data processing pipeline to perform ETL using Apache NiFi, resulting in scalable, modular services for ingesting cyberthreat data and applying complex business logic related to access controls, dissemination, and legal requirements for information sharing.
-\item Led product development for a team of ten software engineers and interfaced with several Federal Government customers, driving requirements discussions, tracking features, user stories, and releases for over a dozen production applications, resulting in delivery of new products and capabilities to support CISA's mission.
-\item Designed and implemented a CICD pipeline using Jenkins, automating build, test, security, and deployment to multiple environments with human-in-the-loop approval phase gates, to support production deployments and operation of a container-based microservices architecture deployed on OpenShift, resulting in significant reduction in time-to-delivery of new features and improved software security and quality.
-\resumeItemListEnd
-
 %-----------PROJECTS-----------------
-\section{Certifications}
-\begin{itemize}
-  \item Certified Ethical Hacker (CEH)
-\end{itemize}
-
 \section{Projects \& Interests}
 \begin{itemize}[leftmargin=0pt]
-  \item[]{\href{https://multiborder.io}{\intersemibold{multiborder (https://multiborder.io)}}}: An iOS app that creates borders around multiple images in different aspect ratios, in order to maximize viewability for social media without cropping. \\
-  \item[]{\intersemibold{oeno.chat}}: GPT-powered wine recommendations that helped users find the perfect wine for any meal. \\
-  \item[]{\intersemibold{lasso}}: A full-stack application written in Python and NextJS; a two-sided marketplace for creator discovery, brand campaigns, and brand-creator relationship management, including customized media kits for creators that showcased their audience and engagement metrics to help land better brand deals. \\
-  \item[]{\intersemibold{wildfire}}: My first dollar earned from the internet! (A whopping \$19). A full-stack application written in Python and NextJS that analyzed creators' Twitter audiences to discover unique customer profiles to derive opportunities for monetization. \\
-  \item[]{\intersemibold{5e-spell-search}}: An ObsidianMD plugin written in TypeScript that imports 5e.tools data and indexes it with Lucene for searching Dungeons and Dragons Fifth Edition spell information.  \\
+  \item[]{\faLink\space \href{https://multiborder.io}{\intersemibold{https://multiborder.io}}}: An iOS app that creates borders around multiple images in different aspect ratios, in order to maximize viewability for social media without cropping. \\
+  \item[]{\faLink\space \href{https://oeno.chat}{\intersemibold{https://oeno.chat}}}: GPT-powered wine recommendations that helps users find the perfect wine for any meal. \\
+  \item[]{\faLink\space \href{https://github.com/adamhp/5e-spell-search}{\intersemibold{https://github.com/adamhp/5e-spell-search}}}: An ObsidianMD plugin written in TypeScript that imports 5e.tools data and indexes it with Lucene for searching Dungeons and Dragons Fifth Edition information.  \\
+  \item[]{\intersemibold{Wildfire}}: Co-founded a SaaS product in the creator economy; startup failure \#1. Analyzed creators' Twitter audiences to discover unique customer profiles to derive opportunities for monetization. \\
+  \item[]{\intersemibold{Lasso}}: Pivoted Wildfire to serve creators directly; startup failure \#2. A two-sided marketplace for creator discovery, brand campaigns, and brand-creator relationship management, including customized media kits for creators that showcased their audience and engagement metrics to help land better brand deals. \\
   \item[]{\intersemibold{Hobbies}}{}: Guitar, music composition, cooking, photography, design, tabletop RPGs, videogames, hiking, fly fishing, reading science fiction and fantasy, writing, microelectronics, gardening
 \end{itemize}
 
-%------------------------------------
 \end{document}
